@@ -71,6 +71,12 @@ for _, row in data.iterrows():
 app = dash.Dash(__name__)
 
 app.layout = html.Div([
+    html.Div([
+    html.P("This dashboard estimates the results of the 2025 Polish presidential run-off election based on first-round voting data."),
+    html.P("Use the sliders or text inputs to adjust how voters from each first-round candidate are expected to vote in the run-off."),
+    html.P("The initial values are derived from voter flow estimates published on ewybory.eu, with undecided voters split 50/50 between the two remaining candidates.")
+    ], style={"maxWidth": "900px", "margin": "0 auto", "paddingBottom": "20px", "fontSize": "15px", "color": "#333"}),
+    
     html.H1("Interactive Run-off Vote Projection", style={"textAlign": "center", "color": "#2c3e50"}),
     html.Div([
         html.Div([
